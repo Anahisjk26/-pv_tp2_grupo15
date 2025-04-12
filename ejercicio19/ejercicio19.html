@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 19</title>
+</head>
+<body>
+    <h1>Datos Alumno</h1>
+    <label for="nombre"> Nombre: </label>
+    <input type="text" id="nombre"><br><br>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido"><br><br>
+
+    <label for="libreta">Libreta Universitaria:</label>
+    <input type="text" id="libreta"><br><br>
+
+    <button id="registrarBtn"> Registrar </button>
+
+    <script type="module">
+        
+        import { obtenerDatos } from "./ejercicio19.js"; 
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const registrarBtn = document.querySelector('#registrarBtn');
+            const nombreInput = document.querySelector('#nombre');
+            const apellidoInput = document.querySelector('#apellido');
+            const libretaInput = document.querySelector('#libreta');
+
+            registrarBtn.addEventListener('click', () => {
+                const nombre = nombreInput.value;
+                const apellido = apellidoInput.value;
+                const libreta = libretaInput.value;
+                obtenerDatos(nombre, apellido, libreta);
+            });
+        });
+    </script>
+</body>
+</html>
