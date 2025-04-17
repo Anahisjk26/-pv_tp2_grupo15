@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11</title>
+
+</head>
+<body>
+    <script>
+
+        let km = parseInt(prompt("Ingrese el número de kilómetros recorridos:"));
+        let litros = parseInt(prompt("Ingrese el número de litros consumidos:"));
+        let consumo = (litros / km).toFixed(2);
+        if (km <= 0 || litros <= 0) {
+            alert("Los valores deben ser mayores que cero.");
+        
+        } else {
+        
+            alert("El consumo de combustible es de " + consumo + " litros por kilómetro.");
+        }
+        </script>
+</body>
+</html>
