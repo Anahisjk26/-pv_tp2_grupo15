@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar Letra A</title>
+    <script>
+        function contarLetraA(texto) {
+            let contador = 0;
+            for (let i = 0; i < texto.length; i++) {
+                if (texto[i].toLowerCase() === 'a') {
+                    contador++;
+                }
+            }
+            return contador;
+        }
+
+        const textoIngresado = prompt("Por favor, ingresa un texto:");
+
+        if (textoIngresado !== null && textoIngresado !== "") {
+            const cantidadA = contarLetraA(textoIngresado);
+            alert(`El texto "${textoIngresado}" contiene ${cantidadA} letras 'a'.`);
+            console.log(`El texto "${textoIngresado}" contiene ${cantidadA} letras 'a'.`);
+        } else {
+            alert("No se ingresó ningún texto.");
+            console.log("No se ingresó ningún texto.");
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

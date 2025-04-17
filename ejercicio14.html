@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 14 - Solo Prompt y Alert</title>
+  <script>
+    function duplicar(arreglo) {
+      return arreglo.map(function(numero) {
+        return numero * 2;
+      });
+    }
+
+    function procesarEntrada() {
+   
+      let entrada = prompt("Ingresa un arreglo de numeros, separados por una coma (,):");
+
+      if (entrada === null || entrada.trim() === "") {
+        alert("No ingresaste ningún número");
+        return;
+      }
+
+      let arreglo = entrada.split(",").map(function(valor) {
+        return parseFloat(valor.trim());
+      });
+
+      if (arreglo.some(isNaN)) {
+        alert("Error: ingresaste un valor que no es un número");
+        return;
+      }
+
+      let resultado = duplicar(arreglo);
+
+      alert("Arreglo duplicado: " + resultado.join(", "));
+    }
+
+    // Se llama a la funcion cada vez que se ingresa a la pagina
+    window.onload = procesarEntrada;
+  </script>
+</head>
+<body>
+</body>
+</html>

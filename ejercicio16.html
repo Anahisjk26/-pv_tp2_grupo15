@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sumar Rango</title>
+</head>
+<body>
+
+<script>
+function sumarRango(inicio, fin) {
+  if (inicio > fin) {
+    return "El número inicial debe ser menor o igual que el número final.";
+  }
+
+  let suma = 0;
+  for (let i = inicio; i <= fin; i++) {
+    suma += i;
+  }
+  return suma;
+}
+
+let numeroInicialStr = prompt("Ingrese el número inicial:");
+let numeroFinalStr = prompt("Ingrese el número final :");
+
+if (numeroInicialStr === null || numeroFinalStr === null) {
+  alert("No ingreso numeros.");
+} else {
+  let numeroInicial = parseInt(numeroInicialStr);
+  let numeroFinal = parseInt(numeroFinalStr);
+
+  if (isNaN(numeroInicial) || isNaN(numeroFinal)) {
+    alert("Debe ingresar numeros enteros.");
+  } else {
+    let resultado = sumarRango(numeroInicial, numeroFinal);
+    alert("La suma del rango es: " + resultado);
+  }
+}
+</script>
+
+</body>
+</html>
