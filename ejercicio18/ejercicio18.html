@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 18 </title>
+  <link rel="stylesheet" href="ejercicio18.css">
+</head>
+<body>
+  <h1>Ejercicio 18 - Cambiar texto con botón</h1>
+
+  <p id="miParrafo">Hola, somos el grupo 15 de la comision de los viernes.</p>
+  <button id="miBoton">Cambiar texto</button>
+
+  <script type="module">
+    import { cambiarTexto } from '../js/ejercicio18.js';
+
+    const boton = document.getElementById("miBoton");
+    const parrafo = document.getElementById("miParrafo");
+
+    boton.addEventListener("click", () => {
+      cambiarTexto(parrafo,"Y estamos aprendiendo Javascript");
+    });
+  </script>
+</body>
+</html>
