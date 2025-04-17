@@ -1,0 +1,40 @@
+body {
+    font-family: sans-serif;
+    background-color: #a5d8ed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.opciones {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.opciones label {
+    margin-left: 5px;
+}
+
+.result p {
+    font-weight: bold;
+    color: #555;
+}
+
+#lenguajeSeleccionado {
+    color: #007bff;
+}
