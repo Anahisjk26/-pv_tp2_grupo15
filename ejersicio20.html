@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="stylesEj20.css">
+  <title>Países y Capitales</title>
+  <link rel="stylesheet" href="./ej20/stylesEj20.css">
 </head>
+
 <body>
-  <h1>Paises de America</h1>
-  <form >
-    <label for="pais">Pais</label>
-    <select id="pais">
-      <option value="ar">Argentina</option>
-      <option value="br">Brasil</option>
-      <option value="ch">Chile</option>
-      <option value="bol">Bolivia</option>
-      <option value="par">Paraguay</option>
-      <option value="ven">Venezuela</option>
+  <h1>Selecciona un País y su Capital</h1>
+  <form>
+    <label for="paises">País:</label>
+    <select id="paises">
+      <option value="">--Selecciona un país--</option>
     </select>
-    <label for="capital">Seleccione una Capital</label>
-    <select id="capital">
-      <option value="" id="cambio">--Seleccione una Capital--</option>
+
+    <label for="capitales">Capital:</label>
+    <select id="capitales" disabled>
+      <option value="">--Selecciona una capital--</option>
     </select>
   </form>
-  <script src="../js/ejersicio20.js" ></script>
+
+  <script type="module" src="./js/ejersicio20.js"></script>
 </body>
+
 </html>
