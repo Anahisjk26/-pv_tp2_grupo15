@@ -1,25 +1,27 @@
+const $form = document.querySelector('form');
+$form.addEventListener ( 'submit', function(e){
+    e.preventDefault();
+    return false;
+})
+
+//------------------------
 const paises = ['Buenos Aires', 'Brasilia', 'Santiago de chile', 'La Paz', 'Montevideo', 'Caracas' ];
-let cap;
+
 const devolverCap = document.getElementById('pais');
 
-function capitales (devolverCap) {
-    switch (devolverCap) {
-        case Argentina: 
-            capital: cap = paises[0];
-            break;
-        case Brasil:
-            capital: cap = paises[1];
-            break;
-        case Chile: cap =  paises[2];
-            break;
-        case Bolivia: cap = paises[3];
-            break;
-        case Paraguay: cap = paises[4];
-            break;
-        case Venezuela: cap = paises[5];
-            break;
-        default:
-            break;
-    }
-}
-capital.textContent = cap;
+
+paises.addEventListener("change", function () {
+
+capitales.innerHTML = '<option value="">--Selecciona una capital--</option>';
+if (paisSeleccionado) {
+    capitales.disabled = false;
+    const capital = data[paisSeleccionado];
+    const option = document.createElement("option");
+    option.value = capital.toLowerCase(); 
+    option.textContent = capital; 
+    capitales.appendChild(option); 
+    console.log(`País seleccionado: ${paisSeleccionado.toUpperCase()}`);
+    console.log(`Capital seleccionada: ${capital}`);
+} else {
+    capitales.disabled = true;
+}})

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 22</title>
+    <link rel="stylesheet" href="ejercicio22.css">
+</head>
+<body>
+    <div class="cont">
+    <label for="texto">Ingresa un texto</label><br>
+    <div class="div-input">
+    <input type="text" id="inputText" placeholder="Escribe aquí..."> <br>
+     </div class="div-contenedor">
+    <label for="output-container">Estas escribiendo </label>
+    </label>  
+    <div>
+    <p id="output-container"></p>
+    </div>
+    <script type="module">
+        import { cambio } from "/js/ejercicio22.js"
+        const inputText = document.getElementById('inputText');
+        const outputContainer = document.getElementById('output-container');
+       
+        cambio(inputText,outputContainer);
+    </script>
+    </div>
+
+    <footer class="footer">
+        <h4> Alumnos Programacion Visual 2025 </h4>
+        <p>Grupo 15</p>
+        <p>Trabajo practico N° 2 | JavaScripts</p>
+    </footer>
+
+</body>
+</html>
